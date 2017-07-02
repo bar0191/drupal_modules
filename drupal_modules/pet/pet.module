@@ -1,0 +1,37 @@
+<?php
+
+function pet_menu() {
+    $items['pet'] = array(
+        'title' => 'Pets',
+        'type' => MENU_NORMAL_ITEM,
+        'page callback' => 'pet_output',
+        'access callback' => TRUE,
+        'menu_name' => 'main-menu',
+    );
+    return $items;
+}
+
+function pet_output() {
+    $mainecoon_img_vars = array(
+        'path' => "/sites/all/modules/pet/images/mainecoon.jpg",
+        'title' => 'Mainecoon',
+        'width' => '50%',
+        'height' => '50%',
+        // 'attributes' => array('class' => 'some-img', 'id' => 'my-img'),
+    );
+
+    $ragdoll_img_vars = array(
+        'path' => "/sites/all/modules/pet/images/ragdoll.jpg",
+        'title' => 'Ragdoll',
+        'width' => '50%',
+        'height' => '50%',
+        // 'attributes' => array('class' => 'some-img', 'id' => 'my-img'),
+    );
+
+
+    $mainecoon = theme('image', $mainecoon_img_vars);
+    $ragdoll = theme('image', $ragdoll_img_vars);
+    return
+        '<p>My favorite pets are the ones I currently own, a Mainecoon, and a Ragdoll.</p>' .
+        $mainecoon . $ragdoll;
+}

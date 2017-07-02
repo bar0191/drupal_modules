@@ -1,0 +1,10 @@
+<?php
+
+$favorites = array(
+    'movies' => array('X-Men', 'Inception', 'Iron-Man'),
+);
+
+function favorites_menu() {
+
+}
+

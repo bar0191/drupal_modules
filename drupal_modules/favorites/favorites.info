@@ -1,0 +1,5 @@
+name = Favorites
+description = Displays information about favorites.
+package = My First Modules
+core = 7.x
+files[] = favorites.module

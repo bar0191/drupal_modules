@@ -1,0 +1,28 @@
+<?php
+
+function cards_menu() {
+    $friends = array('brandon', 'robby', 'bayley');
+
+    foreach ($friends as $friend) {
+        $items[$friend] = array(
+            'title' => $friend,
+            'page callback' => $friend.'_output',
+            'access callback' => TRUE,
+            'type' => MENU_NORMAL_ITEM,
+            'menu_name' => 'main-menu',
+        );
+    }
+    return $items;
+}
+
+function brandon_output() {
+    return "Greetings Brandon!";
+}
+
+function robby_output() {
+    return "Greetings Robby!";
+}
+
+function bayley_output() {
+    return "Greetings Bayley!";
+}
